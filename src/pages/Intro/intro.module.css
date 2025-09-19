@@ -1,0 +1,57 @@
+@import '../../pages/index.css';
+
+.container {
+    gap: 1rem;
+}
+
+.video-container {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0nVVRGLTgnIHN0YW5kYWxvbmU9J25vJz8+PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnN2Zz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA0ODQgODUyJyBmaWxsPSd3aGl0ZSc+PHBhdGggZD0nTSAxMC40MjgzMDEsMTAuNDEyMzc0IEMgMzEuMDYwNzMyLDQuMDA2NzY2MyAxMTAuNjIxMTMsMTIuMzQxOSAxNzEuMzA1NDgsOC43NjI5MTAyIDIzNS41MTY3NCw0Ljk3NTkxMzMgMjc2Ljc5ODE5LDkuMTAwNDI0MSAyODAuNDcyNzIsOS4zNDYxOTQgMzE1LjYxMzA5LDExLjY5NjU0NyA0NzQuMDU5MTUsNC43MDMxOTgzIDQ3NC41LDEwLjUgYyAyLjk3OTExLDM5LjE3MjQwNSAtMS41MjgwNyw4OC45NzM5OSAtMC41MjUxMywxMzMuNDQ0NTQgMC42ODA3MywzMC4xODM0MyAzLjgyNTQ3LDY0LjAyNTU1IDIuNjg5MzQsOTIuOTY0NDcgLTIuNTc4MDUsNjUuNjY2ODMgLTQuNDE0OSwxMjguODg1NDggLTMuMTY0MjEsMTk0LjU5MDk5IDEuMzE0OTQsNjkuMDgwNzEgMi40OTkxOSwxMzYuNDE1ODUgMi41LDIwNC43NSA4LjFlLTQsNjguNjY3NDggMS4yODI4NywyMDYuNzYxNzcgLTIuNSwyMDYuMjUgLTE2LjQ3NDQ4LC0yLjIyODc2IC02MS4zMzA3Myw0LjMxMjEgLTExNiwwIC0zMS4yNDMzOSwtMi40NjQzNiAtNjMuNjU5NTgsMS4yNTIzOCAtOTUsMS4yNSAtMjMuMzM4NjksLTAuMDAyIC0zNi40MTE5NywxLjE3NTY5IC02MS41LC0wLjc1IC0yNi4wOTA0NiwtMi4wMDI2MyAtNTkuNTgyODEsLTEuNTE3MjYgLTg3LjI1LC0xIC0zMi45OTQ2NTUsMC42MTY4NiAtMTAzLjEzMTY1NywzLjQ0NzQ5IC0xMDQsLTAuNSBDIDYuMTY5OTA1OCw4MjUuMjI0ODcgOS4zMDU3MjIsNzkwLjgyODc1IDEwLDc2NS41IDEwLjUyMDkyOCw3NDYuNDk1NDUgOC45NzEzMTI4LDcyNi40OTU3NCA5Ljc1LDcwNy41IDEwLjk1MzI0NSw2NzguMTQ3MzYgNy41MDAwOTM2LDY1NS4zNDc4NCA3LDYyOS41IDYuNDk3MDU2Nyw2MDMuNTA0ODYgOC40NDg4NTY3LDU3OC45OTQxNiA5LDU1MyA5LjU4MzQ2NDQsNTI1LjQ4MTQ1IDEwLjQwNzkxOSw0OTguMjcxNzEgMTAsNDcwLjc1IDkuNzU5Nzg2LDQ1NC41NDMwNyA4LjM5MTk5ODcsNDM4LjE5NzMgOSw0MjIgMTAuNDQwOTI4LDM4My42MTMzNCA5LjQ5MTQ0MDQsMzQ1LjE2ODEgOS41LDMwNi41IDkuNTEyMjEyMiwyNTEuMzMxMDcgOS4xOTc0NTYzLDE5NS42NjgxIDkuNSwxNDAuNSA5LjczOTkyMzMsOTYuNzUwNTc5IDYuOTQ3NzYzNiwxMS40OTI5NTIgMTAuNDI4MzAxLDEwLjQxMjM3NCBaICcgLz48L3N2Zz4K);
+}
+
+.video {
+    border-radius: 2rem;
+
+    max-height: 80dvh;
+    width: 90dvw;
+    /* height: 80dvh; */
+
+    padding: 4rem;
+}
+
+.video-overlay {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: calc(100%);
+    width: calc(100%);
+}
+
+.intro-eye {
+    max-height: 10dvh;
+}
+
+@keyframes border {
+    0% {
+        filter: drop-shadow(0 0 15px var(--foreground));
+    }
+
+    25% {
+        filter: drop-shadow(0 0 20px var(--foreground));
+    }
+
+    50% {
+        filter: drop-shadow(0 0 15px var(--foreground));
+    }
+
+    75% {
+        filter: drop-shadow(0 0 10px var(--foreground));
+    }
+
+    100% {
+        filter: drop-shadow(0 0 15px var(--foreground));
+    }
+}
