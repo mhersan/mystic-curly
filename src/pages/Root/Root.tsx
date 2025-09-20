@@ -1,6 +1,6 @@
 import { Eye } from '@components/Eye';
 import { IntroPath } from '@pages/Intro';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 export const Root = (): React.ReactNode => {
   const navigate = useNavigate();

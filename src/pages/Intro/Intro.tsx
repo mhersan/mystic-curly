@@ -1,7 +1,7 @@
 import { Eye } from '@components/Eye';
 import { SoonPath } from '@pages/Soon';
 import React from 'react';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 // styles
 import styles from './intro.module.css';
 

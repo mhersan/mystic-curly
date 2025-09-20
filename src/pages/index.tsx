@@ -3,11 +3,11 @@ import { Root, RootPath } from '@pages/Root';
 import { Soon, SoonPath } from '@pages/Soon';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router';
+import { createHashRouter, RouterProvider } from 'react-router';
 // styles
 import './index.css';
 
-const appRouter = createBrowserRouter([
+const appRouter = createHashRouter([
   {
     path: RootPath,
     element: <Root />,
@@ -20,11 +20,7 @@ const appRouter = createBrowserRouter([
     path: SoonPath,
     element: <Soon />,
   },
-],
-  {
-    basename: '/mystic-curly',
-  }
-);
+]);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
