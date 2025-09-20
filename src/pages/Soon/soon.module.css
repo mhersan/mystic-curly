@@ -6,7 +6,7 @@
 }
 
 .message {
-    font-size: min(9dvw, 9dvh);
+    font-size: min(8dvw, 8dvh);
 
     opacity: 0;
     animation: fadeInAndOut 20s linear 1;
