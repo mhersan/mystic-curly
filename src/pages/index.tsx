@@ -20,7 +20,11 @@ const appRouter = createBrowserRouter([
     path: SoonPath,
     element: <Soon />,
   },
-]);
+],
+  {
+    basename: '/mystic-curly',
+  }
+);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
