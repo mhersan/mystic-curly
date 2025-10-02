@@ -1,0 +1,65 @@
+.roboto-400 {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth"100;
+}
+
+.eagle-lake-regular {
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.glow {
+  filter: drop-shadow(0 0 5px var(--foreground));
+}
+
+.card-text-container {
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-style: normal;
+  font-variant: small-caps;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-subtitle {
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-style: italic;
+  font-size: 1.5rem;
+
+  margin-bottom: 3rem;
+}
+
+.card-content {
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 2rem;
+  margin: 0;
+}
+
+.card-eye {
+  height: 20dvh;
+}

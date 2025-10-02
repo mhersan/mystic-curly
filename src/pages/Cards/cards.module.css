@@ -1,0 +1,27 @@
+@import '../../pages/common.css';
+
+.container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.eye {
+    height: 5dvh;
+}
+
+.card-container {
+    /* margin: 10dvh 4dvh;
+    height: 55dvh; */
+    height: 60dvh;
+}
+
+.cards-list {
+    height: 10vh;
+    /* height: 100%; */
+    display: flex;
+    justify-content: space-evenly;
+}

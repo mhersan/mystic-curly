@@ -1,0 +1,241 @@
+@import '../../pages/common.css';
+
+.star {
+    opacity: 0;
+    animation: fill 4s infinite linear;
+    filter: drop-shadow(0 0 15px var(--foreground));
+}
+
+.icon-background {
+    opacity: 0;
+    animation: fill 4s infinite linear;
+}
+
+.icon {
+    opacity: 0;
+    animation: fill 4s infinite reverse linear;
+}
+
+@keyframes fill {
+    0% {
+        opacity: 0.1;
+    }
+
+    10% {
+        opacity: 0.4;
+    }
+
+    20% {
+        opacity: 0.1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}
+
+/**************************/
+
+.wl {
+    transform: translate(0, 0px);
+    animation: flow-85 1s linear infinite;
+}
+
+.wl-offset {
+    transform: translate(0, -85px);
+    animation: flow-85 1s 0.5s linear infinite;
+}
+
+.wlb {
+    transform: translate(0, 0px);
+    animation: flow-85 3s linear infinite;
+}
+
+.wlb-offset {
+    transform: translate(0, -85px);
+    animation: flow-85 3s 1.5s linear infinite;
+}
+
+@keyframes flow-85 {
+    0% {
+        transform: translate(0px, -85px);
+    }
+
+    100% {
+        transform: translate(0px, 85px);
+
+    }
+}
+
+.wr {
+    transform: translate(0, 0px);
+    animation: flow-150 4s linear infinite;
+}
+
+.wr-offset {
+    transform: translate(0, -151px);
+    animation: flow-150 4s 2s linear infinite;
+}
+
+
+@keyframes flow-150 {
+    0% {
+        transform: translate(0px, -151px);
+    }
+
+    100% {
+        transform: translate(0px, 151px);
+
+    }
+}
+
+/**************************/
+
+.wave-1-inverse {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: ripple-1-inverse 1s linear infinite;
+}
+
+@keyframes ripple-1-inverse {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+
+    }
+
+    50% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+
+.wave-2 {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: ripple-2 1s 1s linear infinite;
+    opacity: 0;
+}
+
+@keyframes ripple-2 {
+    0% {
+        opacity: 1;
+
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+.wave-2-inverse {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: ripple-2-inverse 1s linear infinite;
+}
+
+@keyframes ripple-2-inverse {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.wave-3 {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: ripple-3 1s 1s linear infinite;
+    opacity: 0;
+}
+
+@keyframes ripple-3 {
+    0% {
+        opacity: 1;
+
+    }
+
+    75% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.wave-3-inverse {
+    transform-origin: center;
+    transform-box: fill-box;
+    animation: ripple-3-inverse 1s linear infinite;
+}
+
+@keyframes ripple-3-inverse {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.wave-4 {
+    animation: ripple 2s linear infinite;
+}
+
+@keyframes ripple {
+    0% {
+        opacity: 1;
+
+    }
+
+    50% {
+        transform: translate(-51px, -247.99741px) scale(1.5);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

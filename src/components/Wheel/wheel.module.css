@@ -1,0 +1,48 @@
+@import '../../pages/common.css';
+
+.icon {
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    animation: spin-l 20s linear infinite;
+}
+
+
+.wheel {
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    animation: spin-r 20s linear infinite;
+    filter: drop-shadow(0 0 2px var(--foreground));
+}
+
+.wheel-text {
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    animation: spin-l 20s linear infinite;
+}
+
+@keyframes spin-r {
+    0% {
+        transform: rotate(360deg);
+        filter: drop-shadow(0 0 2px var(--foreground));
+    }
+
+    50% {
+        transform: rotate(180deg);
+        filter: drop-shadow(0 0 12px var(--foreground));
+    }
+
+    100% {
+        transform: rotate(0deg);
+        filter: drop-shadow(0 0 2px var(--foreground));
+    }
+}
+
+@keyframes spin-l {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

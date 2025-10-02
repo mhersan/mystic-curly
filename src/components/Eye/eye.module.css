@@ -1,8 +1,8 @@
-@import '../../pages/index.css';
+@import '../../pages/common.css';
 
 .eye {
     cursor: pointer;
-    width: 90dvw;
+    /* width: 90dvw; */
     animation: eye 4s linear infinite;
 }
 

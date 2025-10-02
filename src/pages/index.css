@@ -10,6 +10,9 @@
   border: 0 solid;
   margin: 0;
   padding: 0;
+
+  /* TODO: */
+  /* outline: 1px solid greenyellow; */
 }
 
 html,
@@ -30,6 +33,14 @@ body,
   color: var(--foreground);
 }
 
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -39,28 +50,4 @@ section {
   height: calc(100dvh - 2rem);
   width: calc(100dvw - 2rem);
   margin: 1rem;
-}
-
-.roboto-400 {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth"100;
-}
-
-.eagle-lake-regular {
-  font-family: "Eagle Lake", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.cinzel-decorative-regular {
-  font-family: "Cinzel Decorative", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.glow {
-  filter: drop-shadow(0 0 5px var(--foreground));
 }

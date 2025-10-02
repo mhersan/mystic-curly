@@ -3,7 +3,7 @@ import styles from './eye.module.css';
 interface Props {
     className: string;
     fill: string;
-    onClick: () => void;
+    onClick: (ev: React.MouseEvent<SVGSVGElement>) => void;
 }
 
 export const Eye = ({ className, fill, onClick }: Props): React.ReactNode => {

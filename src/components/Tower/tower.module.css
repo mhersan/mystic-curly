@@ -1,0 +1,225 @@
+@import '../../pages/common.css';
+
+.flicker {
+    animation-name: flicker;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+    transform-box: fill-box;
+}
+
+.one {
+    animation-duration: 2s;
+    animation-delay: 0.1s;
+    transform-origin: bottom;
+    fill: rgb(from var(--background) r g b / .6)
+}
+
+.two {
+    animation-duration: 3s;
+    animation-delay: 0.2s;
+    transform-origin: bottom;
+    fill: rgb(from var(--background) r g b / .6)
+}
+
+.three {
+    animation-duration: 2.1s;
+    animation-delay: 0.3s;
+    transform-origin: bottom;
+    fill: rgb(from var(--background) r g b / .7)
+}
+
+.four {
+    animation-duration: 3.2s;
+    animation-delay: 0.4s;
+    transform-origin: bottom;
+}
+
+.five {
+    animation-duration: 2.5s;
+    animation-delay: 0.5s;
+    transform-origin: left;
+}
+
+.six {
+    animation-duration: 2.5s;
+    animation-delay: 0.5s;
+    transform-origin: bottom;
+
+}
+
+.seven {
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    transform-origin: bottom;
+}
+
+
+@keyframes flicker {
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    20% {
+        transform: rotate(2deg);
+    }
+
+    40% {
+        transform: rotate(-1deg);
+    }
+
+    60% {
+        transform: rotate(1deg) scaleY(1.03);
+    }
+
+    80% {
+        transform: rotate(-1deg) scaleY(0.92);
+    }
+
+    100% {
+        transform: rotate(1deg);
+    }
+}
+
+
+/**************************************/
+
+.lightning {
+    clip-path: inset(0% 0% 100% 100% 25%);
+
+    clip-path: polygon(
+            /* vértice superior */
+            150% -100%,
+            /* vértice derecho */
+            200% -50%,
+            /* vértice inferior */
+            150% 50%,
+            /* vértice izquierdo */
+            50% -50%
+            /**/
+        );
+
+    animation: move 4s infinite linear;
+}
+
+.lightning-background {
+    filter: blur(15px) drop-shadow(0 0 5px var(--foreground));
+    opacity: 0;
+    animation: lightning-flash 4s infinite linear;
+    animation-delay: 0.1s;
+}
+
+@keyframes lightning-flash {
+    0% {
+        opacity: 0;
+        filter: blur(15px) drop-shadow(0 0 5px var(--foreground));
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    10% {
+        filter: blur(13px) drop-shadow(0 0 5px var(--foreground));
+        opacity: 0.1;
+    }
+
+    15% {
+        filter: blur(15px) drop-shadow(0 0 5px var(--foreground));
+        opacity: 0;
+    }
+}
+
+
+.icon-background {
+    filter: blur(5px);
+    opacity: 0;
+    animation: flash 4s infinite linear;
+    animation-delay: 0.1s;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 0.4;
+        filter: blur(5px);
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    10% {
+        filter: blur(3px);
+        opacity: 0.5;
+    }
+
+    15% {
+        filter: blur(5px);
+        opacity: 0.4;
+    }
+}
+
+.icon {
+    clip-path: inset(0% 0% 100% 100% 25%);
+    /* animation: flash 4s linear infinite; */
+
+    clip-path: polygon(
+            /* vértice superior */
+            150% -100%,
+            /* vértice derecho */
+            200% -50%,
+            /* vértice inferior */
+            150% 50%,
+            /* vértice izquierdo */
+            50% -50%
+            /**/
+        );
+
+    animation: move 4s infinite linear;
+}
+
+@keyframes move {
+    0% {
+        clip-path: polygon(
+                /* vértice superior */
+                150% -100%,
+                /* vértice derecho */
+                200% -50%,
+                /* vértice inferior */
+                150% 50%,
+                /* vértice izquierdo */
+                50% -50%
+                /**/
+            );
+    }
+
+    10% {
+        clip-path: polygon(
+                /* vértice superior */
+                -50% 50%,
+                /* vértice derecho */
+                50% 150%,
+                /* vértice inferior */
+                -50% 200%,
+                /* vértice izquierdo */
+                -10% 50%
+                /**/
+            );
+    }
+
+
+    100% {
+        clip-path: polygon(
+                /* vértice superior */
+                -50% 50%,
+                /* vértice derecho */
+                50% 150%,
+                /* vértice inferior */
+                -50% 200%,
+                /* vértice izquierdo */
+                -10% 50%
+                /**/
+            );
+    }
+}

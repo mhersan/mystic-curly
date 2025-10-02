@@ -1,0 +1,32 @@
+@import '../../pages/common.css';
+
+.title {
+    font-size: 3.5dvh;
+    animation: fadeIn 2s linear;
+}
+
+.message {
+    font-size: 2.5dvh;
+    animation: fadeIn 10s linear;
+}
+
+.eye {
+    height: 5dvh;
+}
+
+@keyframes fadeIn {
+    0% {
+        filter: drop-shadow(0 0 50px var(--foreground));
+        opacity: 0;
+    }
+
+    20% {
+        filter: drop-shadow(0 0 50px var(--foreground));
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        filter: none;
+    }
+}

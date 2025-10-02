@@ -1,6 +1,8 @@
 import { Eye, EyeClosed } from '@components/Eye';
+import { CardsPath } from '@pages/Cards';
 import { baseStorage } from '@utils/storage';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { stageMessageMap } from './stages';
 // styles
 import styles from './soon.module.css';
@@ -11,20 +13,48 @@ interface SoonStage {
 }
 
 const soonStorage = baseStorage<SoonStage>('SOON_STAGE');
+const cardsStorage = baseStorage<boolean>('CARDS_UNLOCKED');
 
 export const Soon = (): React.ReactNode => {
+    const navigate = useNavigate();
+
     const [refresh, setRefresh] = React.useState<number>(0);
 
     const [message, waiting] = checkStage();
 
+    if (!soonStorage.get()?.step) {
+        window.setTimeout(() => {
+            navigate(0);
+        }, 60000);
+    }
+
     const render = (): React.JSX.Element => {
-        const content = waiting ? renderMessage() : renderEye();
+        const content = cardsStorage.get() ? renderNavigation() : renderStep();
 
         return (
             <section key={refresh}>
                 {content}
             </section>
         );
+    };
+
+    const renderNavigation = (): React.JSX.Element => {
+        return (
+            <>
+                <p className={`eagle-lake-regular ${styles.next}`}>Bien hecho. Tu ojo místico es ahora capaz de descifrar los enigmas de las cartas.</p>
+                <p className={`eagle-lake-regular ${styles.eye}`}>
+                    <Eye className='' fill='white' onClick={goToCards} />
+                </p>
+            </>
+        );
+    };
+
+    const goToCards = () => {
+        navigate(CardsPath);
+    };
+
+    const renderStep = (): React.JSX.Element => {
+        return waiting ? renderMessage() : renderEye();
     };
 
     const renderMessage = (): React.JSX.Element => {
@@ -58,6 +88,10 @@ export const Soon = (): React.ReactNode => {
         const stage = getStage(currentDate);
         stage.step += 1;
         stage.targetDate = currentDate + msPerDay;
+
+        if (stage.step > 0) {
+            cardsStorage.set(true);
+        }
 
         setStage(stage);
         setRefresh(currentDate);
